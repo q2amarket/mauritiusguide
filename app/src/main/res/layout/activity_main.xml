@@ -1,149 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
-    tools:context=".MainActivity"
-    android:background="?attr/backgroundColor">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true"
+    tools:context=".MainActivity">
 
-    <android.support.v7.widget.CardView
-        android:id="@+id/top_card"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:cardBackgroundColor="?attr/cardBackground"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+    <include
+        layout="@layout/app_bar_tabs" />
 
-        <android.support.constraint.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:padding="16dp">
-
-            <TextView
-                android:id="@+id/card_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="Card Title"
-                android:textColor="?attr/textColor"
-                android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/card_info"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu"
-                android:textColor="?attr/textColor"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/card_title" />
-
-        </android.support.constraint.ConstraintLayout>
-    </android.support.v7.widget.CardView>
-
-    <android.support.v7.widget.CardView
-        android:id="@+id/bottom_card"
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        app:cardBackgroundColor="?attr/cardBackground"
-        app:layout_constraintTop_toBottomOf="@+id/top_card">
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-        <android.support.constraint.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="16dp">
+    </android.support.v4.view.ViewPager>
 
-            <TextView
-                android:id="@+id/text_component"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Some Components"
-                android:textColor="?attr/textColor"
-                android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <RadioButton
-                android:id="@+id/radioButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:buttonTint="?attr/tintColor"
-                android:drawablePadding="0dp"
-                android:textColor="?attr/textColor"
-                android:text="Radio Button"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/text_component" />
-
-            <android.support.v7.widget.AppCompatButton
-                style="@style/AppTheme.Button"
-                android:id="@+id/button_first"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="Button"
-
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="@+id/radioButton"
-                app:layout_constraintTop_toBottomOf="@+id/radioButton" />
-
-            <android.support.v7.widget.AppCompatButton
-                style="@style/AppTheme.ButtonAccent"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Button Accent"
-                android:id="@+id/button_accent"
-                app:layout_constraintBottom_toBottomOf="@id/button_first"
-                app:layout_constraintEnd_toEndOf="parent"/>
-
-        </android.support.constraint.ConstraintLayout>
-
-    </android.support.v7.widget.CardView>
-
-    <android.support.v7.widget.CardView
-        android:id="@+id/third_card"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        app:cardBackgroundColor="?attr/cardBackground"
-        app:layout_constraintTop_toBottomOf="@+id/bottom_card">
-
-        <android.support.constraint.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="16dp">
-
-            <TextView
-                android:id="@+id/theme_label"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Enable Dark Mode"
-                android:textColor="?attr/textColor"
-                android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <Switch
-                android:id="@+id/mySwitch"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="Night Mode"
-                android:textColor="?attr/textColor"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/theme_label" />
-
-        </android.support.constraint.ConstraintLayout>
-
-    </android.support.v7.widget.CardView>
-
-</android.support.constraint.ConstraintLayout>
+</android.support.design.widget.CoordinatorLayout>
