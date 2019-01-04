@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/list_item_layout"
+    android:id="@+id/place_list_item_layout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <android.support.design.card.MaterialCardView
-        android:id="@+id/circularRevealCardView"
+    <android.support.v7.widget.CardView
+        android:id="@+id/place_card_view"
         style="@style/AppThemeCardView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -15,6 +15,9 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackground"
         app:cardPreventCornerOverlap="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -27,7 +30,7 @@
             android:layout_height="wrap_content">
 
             <ImageView
-                android:id="@+id/item_image"
+                android:id="@+id/place_item_image"
                 android:layout_width="112dp"
                 android:layout_height="112dp"
                 android:contentDescription="@string/app_name"
@@ -37,23 +40,27 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/item_heading"
+                android:id="@+id/place_item_heading"
                 style="@style/AppThemeCardViewHeading"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:ellipsize="end"
+                android:maxLines="1"
                 android:text="Item Heading"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toEndOf="@+id/item_image"
+                app:layout_constraintStart_toEndOf="@+id/place_item_image"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.0" />
 
             <TextView
-                android:id="@+id/item_excerpt"
+                android:id="@+id/place_item_excerpt"
                 style="@style/AppThemeCardViewBody2"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -64,31 +71,31 @@
                 android:ellipsize="end"
                 android:maxLines="2"
                 android:text="Each device OEM provides a mask, which the system then uses to render all adaptive icons with the same shape. Adaptive launcher icons are also used in shortcuts,"
-                app:layout_constraintBottom_toBottomOf="@+id/item_image"
+                app:layout_constraintBottom_toBottomOf="@+id/place_item_image"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="@+id/item_heading"
-                app:layout_constraintTop_toBottomOf="@+id/item_heading" />
+                app:layout_constraintStart_toStartOf="@+id/place_item_heading"
+                app:layout_constraintTop_toBottomOf="@+id/place_item_heading" />
 
             <View
-                android:id="@+id/divider"
+                android:id="@+id/place_divider"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:background="@color/colorDarkContrast"
                 app:layout_constraintStart_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/item_image" />
+                app:layout_constraintTop_toBottomOf="@+id/place_item_image" />
 
             <android.support.constraint.ConstraintLayout
-                android:id="@+id/ratingLayout"
+                android:id="@+id/place_rating_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/divider">
+                app:layout_constraintTop_toBottomOf="@+id/place_divider">
 
                 <TextView
-                    android:id="@+id/ratingLabel"
+                    android:id="@+id/place_rating_label"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
@@ -102,7 +109,7 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <android.widget.RatingBar
-                    android:id="@+id/item_rating_bar"
+                    android:id="@+id/place_item_rating_bar"
                     style="@style/Base.Widget.AppCompat.RatingBar.Small"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -112,13 +119,14 @@
                     android:layout_marginBottom="16dp"
                     android:isIndicator="true"
                     android:numStars="5"
-                    android:rating="4.3"
+                    android:rating="4.7"
+                    android:stepSize="0.1"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/item_rating_text"
+                    app:layout_constraintEnd_toStartOf="@+id/place_item_rating_text"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/item_rating_text"
+                    android:id="@+id/place_item_rating_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
@@ -135,7 +143,6 @@
 
         </android.support.constraint.ConstraintLayout>
 
-    </android.support.design.card.MaterialCardView>
-
+    </android.support.v7.widget.CardView>
 
 </android.support.constraint.ConstraintLayout>

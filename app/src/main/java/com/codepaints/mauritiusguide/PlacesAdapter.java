@@ -22,7 +22,7 @@ public class PlacesAdapter extends RecyclerView.Adapter<PlacesAdapter.PlacesView
     @NonNull
     @Override
     public PlacesViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.list_item, viewGroup, false);
+        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.place_list_item, viewGroup, false);
         return new PlacesViewHolder(view);
     }
 
@@ -35,6 +35,7 @@ public class PlacesAdapter extends RecyclerView.Adapter<PlacesAdapter.PlacesView
         viewHolder.itemExcerpt.setText(place.getPlaceExcerpt());
         viewHolder.itemRatings.setText(place.getPlaceRatings());
         viewHolder.itemRatingBar.setRating(Float.parseFloat(place.getPlaceRatings()));
+        viewHolder.itemImage.setImageResource(place.getPlaceImage());
 
     }
 
@@ -54,11 +55,11 @@ public class PlacesAdapter extends RecyclerView.Adapter<PlacesAdapter.PlacesView
         public PlacesViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            itemHeading = itemView.findViewById(R.id.item_heading);
-            itemExcerpt = itemView.findViewById(R.id.item_excerpt);
-            itemRatings = itemView.findViewById(R.id.item_rating_text);
-            itemRatingBar = itemView.findViewById(R.id.item_rating_bar);
-            itemImage = itemView.findViewById(R.id.item_image);
+            itemHeading = itemView.findViewById(R.id.place_item_heading);
+            itemExcerpt = itemView.findViewById(R.id.place_item_excerpt);
+            itemRatings = itemView.findViewById(R.id.place_item_rating_text);
+            itemRatingBar = itemView.findViewById(R.id.place_item_rating_bar);
+            itemImage = itemView.findViewById(R.id.place_item_image);
 
         }
     }
