@@ -34,7 +34,7 @@ public class RestaurantsFragment extends Fragment {
             Bundle savedInstanceState
     ) {
         // Inflate the layout for this fragment
-        View rootView = inflater.inflate(R.layout.fragment_restaurants, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_places, container, false);
 
         mRecyclerView = rootView.findViewById(R.id.recyclerView);
 

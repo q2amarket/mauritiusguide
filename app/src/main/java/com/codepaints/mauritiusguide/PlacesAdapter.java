@@ -1,6 +1,7 @@
 package com.codepaints.mauritiusguide;
 
 import android.support.annotation.NonNull;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.List;
 
@@ -37,6 +39,13 @@ public class PlacesAdapter extends RecyclerView.Adapter<PlacesAdapter.PlacesView
         viewHolder.itemRatingBar.setRating(Float.parseFloat(place.getPlaceRatings()));
         viewHolder.itemImage.setImageResource(place.getPlaceImage());
 
+//        viewHolder.itemCardVIew.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Toast.makeText(view.getContext(), "Item Clicked " + getItemCount(), Toast.LENGTH_SHORT).show();
+//            }
+//        });
+
     }
 
     @Override
@@ -51,6 +60,7 @@ public class PlacesAdapter extends RecyclerView.Adapter<PlacesAdapter.PlacesView
         public ImageView itemImage;
         public TextView  itemRatings;
         public RatingBar itemRatingBar;
+        public CardView  itemCardVIew;
 
         public PlacesViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -60,6 +70,14 @@ public class PlacesAdapter extends RecyclerView.Adapter<PlacesAdapter.PlacesView
             itemRatings = itemView.findViewById(R.id.place_item_rating_text);
             itemRatingBar = itemView.findViewById(R.id.place_item_rating_bar);
             itemImage = itemView.findViewById(R.id.place_item_image);
+            itemCardVIew = itemView.findViewById(R.id.place_card_view);
+
+            itemCardVIew.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Toast.makeText(view.getContext(), "Item Clicked! " + itemHeading.getText(), Toast.LENGTH_SHORT).show();
+                }
+            });
 
         }
     }
