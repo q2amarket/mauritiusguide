@@ -16,15 +16,6 @@ class PageViewAdapter extends FragmentPagerAdapter {
     @Override
     public Fragment getItem(int i) {
 
-//        PlacesFragment placesFragment = new PlacesFragment();
-//        i += i;
-//
-//        Bundle bundle = new Bundle();
-//        bundle.putString("message", "Fragment: " + i);
-//        placesFragment.setArguments(bundle);
-//
-//        return placesFragment;
-
         if (i == 0) {
             return new PlacesFragment();
         } else if (i == 1) {

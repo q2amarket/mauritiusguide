@@ -118,7 +118,6 @@ public class PlacesFragment extends Fragment {
                 4.8f
         ));
 
-
         mRecyclerView.setHasFixedSize(true);
         mLayoutManager = new LinearLayoutManager(getActivity());
         mAdapter = new PlacesAdapter(mPlaces);

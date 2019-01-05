@@ -3,4 +3,8 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="customer_ratings">Customer ratings</string>
+    <string name="item_heading">Item Heading</string>
+    <string name="list_item_placeholder">Each device OEM provides a mask, which the system then uses to render all adaptive icons with the same shape. Adaptive launcher icons are also used in shortcuts,</string>
+    <string name="ratings_value_placeholder">4.5</string>
 </resources>

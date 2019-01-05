@@ -12,8 +12,27 @@
     <string name="albion_title">Albion Lighthouse</string>
     <string name="le_morne_title">Le Morne</string>
     <!-- title hotels-->
-    <string name="long_beach">Long Beach</string>
-    <string name="sun_resort">Sun Resort</string>
+    <string name="hotel_a">Royal Palace</string>
+    <string name="hotel_b">Aqua Marina</string>
+    <string name="hotel_c">Coco World</string>
+    <string name="hotel_d">Blue Beach Resort</string>
+    <string name="hotel_e">Golden Gateway Hotel</string>
+    <string name="hotel_f">Hotel Pool Party</string>
+    <string name="hotel_g">Arial Beach Resort</string>
+    <string name="hotel_h">Delphine Group</string>
+    <string name="hotel_i">Village Pool</string>
+    <string name="hotel_j">Mountain View Point</string>
+    <!-- title restaurants-->
+    <string name="restaurant_a">Pink Paprika</string>
+    <string name="restaurant_b">Dodo Restaurant</string>
+    <string name="restaurant_c">Coco World</string>
+    <string name="restaurant_d">Blue Beach Resort</string>
+    <string name="restaurant_e">Golden Gateway Hotel</string>
+    <string name="restaurant_f">Hotel Pool Party</string>
+    <string name="restaurant_g">Arial Beach Resort</string>
+    <string name="restaurant_h">Delphine Group</string>
+    <string name="restaurant_i">Village Pool</string>
+    <string name="restaurant_j">Mountain View Point</string>
     <!-- content -->
     <string name="crystal_rock_content">Off the south west coast of Mauritius, about 200 meters from the shore, sits this rock in the middle of the ocean. In the shadow of the mountains with the crystal clear sea, it is an area of natural beauty. The crystal rock itself is pretty, but it is the views around that make the experience .The famous Crystal Rock of Mauritius is a wonderful place for diving with a possibility to see a variety of tropical fishes and encounter dolphins!</string>
     <string name="garden_content">Mauritius National Botanical Garden is home to an incredible variety of tropical plants, many of them indigenous.\nThe Botanic Garden, formally known as Sir Seewoosagur Botanic Garden, is one of the most visited attractions in Mauritius.\nThe garden is located in the proximity of Port-Louis in the district of Pamplemousse.\n\nThe botanical garden was initially opened as a private garden by the French governor of Mauritius nearly 300 years ago, later to become the national botanical garden of Mauritius.\n\nThe botanical garden stretches over endless acres of land and it may take you more than a week to cover the whole garden. It is populated with more than 650 varieties of plants among which are the famous Baobabs, the Palmier Bouteille, the ineluctable Giant Water Lilies, dozens of medicinal plants, a large spice garden and many more.\n\nOne of the main attractions of the botanical garden is the 85 different varieties of palm trees brought from different corners of the world. Other indigenous species of plants are also exhibited here.\n\nGuides are available at the entrance of the garden, offering a full tour for as little as 1 euro/hour per person (payment for the guides is done at the entrance of the botanical garden). We highly recommend using the guides’ services.</string>

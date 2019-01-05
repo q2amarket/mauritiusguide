@@ -4,9 +4,13 @@ package com.codepaints.mauritiusguide;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import java.util.ArrayList;
 
 
 /**
@@ -14,6 +18,10 @@ import android.view.ViewGroup;
  */
 public class RestaurantsFragment extends Fragment {
 
+    ArrayList<Place>           mRestaurants;
+    RecyclerView               mRecyclerView;
+    RecyclerView.LayoutManager mLayoutManager;
+    RecyclerView.Adapter       mAdapter;
 
     public RestaurantsFragment() {
         // Required empty public constructor
@@ -26,7 +34,26 @@ public class RestaurantsFragment extends Fragment {
             Bundle savedInstanceState
     ) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_restaurants, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_restaurants, container, false);
+
+        mRecyclerView = rootView.findViewById(R.id.recyclerView);
+
+        mRestaurants = new ArrayList<>();
+
+        mRestaurants.add(new Place(
+                getResources().getString(R.string.restaurant_a),
+                getResources().getString(R.string.dummy_content_long),
+                R.drawable.img_restaurant_a,
+                3.8f
+        ));
+
+        mRecyclerView.setHasFixedSize(true);
+        mLayoutManager = new LinearLayoutManager(getActivity());
+        mAdapter = new PlacesAdapter(mRestaurants);
+        mRecyclerView.setLayoutManager(mLayoutManager);
+        mRecyclerView.setAdapter(mAdapter);
+
+        return rootView;
     }
 
 }
