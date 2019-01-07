@@ -6,4 +6,5 @@
     <color name="windowBackground">#2E374F</color>
     <color name="colorDarkContrast">#50586E</color>
     <color name="colorTextDark">#8990a6</color>
+    <color name="colorWhite">#FFFFFF</color>
 </resources>

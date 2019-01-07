@@ -113,7 +113,7 @@ public class HotelsFragment extends Fragment {
 
         mRecyclerView.setHasFixedSize(true);
         mLayoutManager = new LinearLayoutManager(getActivity());
-        mAdapter = new PlacesAdapter(mHotels);
+        mAdapter = new PlacesAdapter(getContext(), mHotels);
         mRecyclerView.setLayoutManager(mLayoutManager);
         mRecyclerView.setAdapter(mAdapter);
 

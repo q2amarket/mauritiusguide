@@ -8,6 +8,7 @@ public class Place {
     private String placeExcerpt;
     private int placeImage;
     private float placeRatings;
+    private int placeImageLarge;
 
     public Place(String placeTitle, String placeExcerpt, int placeImage, float placeRatings) {
         this.placeTitle = placeTitle;

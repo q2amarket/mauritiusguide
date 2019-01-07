@@ -1,8 +1,8 @@
 package com.codepaints.mauritiusguide;
 
+import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
-import android.support.v4.app.Fragment;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -18,9 +18,12 @@ import java.util.List;
 public class PlacesAdapter extends RecyclerView.Adapter<PlacesAdapter.PlacesViewHolder> {
 
     private List<Place> mPlaces;
+    private Context     mContext;
 
-    public PlacesAdapter(List<Place> mPlaces) {
+    public PlacesAdapter(Context context, List<Place> mPlaces) {
+
         this.mPlaces = mPlaces;
+        this.mContext = context;
     }
 
     @NonNull
@@ -31,9 +34,9 @@ public class PlacesAdapter extends RecyclerView.Adapter<PlacesAdapter.PlacesView
     }
 
     @Override
-    public void onBindViewHolder(@NonNull PlacesViewHolder viewHolder, int i) {
+    public void onBindViewHolder(@NonNull final PlacesViewHolder viewHolder, int i) {
 
-        Place place = mPlaces.get(i);
+        final Place place = mPlaces.get(i);
 
         viewHolder.itemHeading.setText(place.getPlaceTitle());
         viewHolder.itemExcerpt.setText(place.getPlaceExcerpt());
@@ -41,12 +44,18 @@ public class PlacesAdapter extends RecyclerView.Adapter<PlacesAdapter.PlacesView
         viewHolder.itemRatingBar.setRating(Float.parseFloat(place.getPlaceRatings()));
         viewHolder.itemImage.setImageResource(place.getPlaceImage());
 
-//        viewHolder.itemCardVIew.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Toast.makeText(view.getContext(), "Item Clicked " + getItemCount(), Toast.LENGTH_SHORT).show();
-//            }
-//        });
+        viewHolder.itemCardVIew.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(mContext, "Item Clicked " + place.getPlaceImage() + " / " + place.getPlaceTitle(), Toast.LENGTH_SHORT).show();
+
+                Intent intent = new Intent(mContext, PlaceActivity.class);
+                intent.putExtra("place_image", place.getPlaceImage());
+                intent.putExtra("place_heading", place.getPlaceTitle());
+                intent.putExtra("place_content", place.getPlaceExcerpt());
+                mContext.startActivity(intent);
+            }
+        });
 
     }
 
@@ -78,11 +87,6 @@ public class PlacesAdapter extends RecyclerView.Adapter<PlacesAdapter.PlacesView
                 @Override
                 public void onClick(View view) {
                     Toast.makeText(view.getContext(), "Item Clicked! " + itemHeading.getText(), Toast.LENGTH_SHORT).show();
-
-                    // load fragment
-                    AppCompatActivity activity   = (AppCompatActivity) view.getContext();
-                    Fragment          myFragment = new Fragment();
-                    activity.getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, myFragment).addToBackStack(null).commit();
                 }
             });
 

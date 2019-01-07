@@ -27,7 +27,6 @@ public class RestaurantsFragment extends Fragment {
         // Required empty public constructor
     }
 
-
     @Override
     public View onCreateView(
             @NonNull LayoutInflater inflater, ViewGroup container,
@@ -49,7 +48,7 @@ public class RestaurantsFragment extends Fragment {
 
         mRecyclerView.setHasFixedSize(true);
         mLayoutManager = new LinearLayoutManager(getActivity());
-        mAdapter = new PlacesAdapter(mRestaurants);
+        mAdapter = new PlacesAdapter(getContext(), mRestaurants);
         mRecyclerView.setLayoutManager(mLayoutManager);
         mRecyclerView.setAdapter(mAdapter);
 

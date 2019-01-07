@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true"
+    android:scrollbars="vertical"
+    tools:context=".PlaceActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/place_single_parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include
+            android:id="@+id/place_single_appbar"
+            layout="@layout/app_bar"
+            app:layout_constraintEnd_toEndOf="@id/place_single_parent"
+            app:layout_constraintStart_toStartOf="@id/place_single_parent"
+            app:layout_constraintTop_toTopOf="@id/place_single_parent"/>
+
+        <ImageView
+            android:id="@+id/place_single_image"
+            android:layout_width="match_parent"
+            android:layout_height="320dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/img_cristal_rock"
+            app:layout_constraintEnd_toEndOf="@id/place_single_parent"
+            app:layout_constraintStart_toStartOf="@id/place_single_parent"
+            app:layout_constraintTop_toBottomOf="@id/place_single_appbar" />
+
+        <TextView
+            android:id="@+id/place_single_heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/crystal_rock_title"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="@id/place_single_parent"
+            app:layout_constraintTop_toBottomOf="@+id/place_single_image" />
+
+        <TextView
+            android:id="@+id/place_single_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/crystal_rock_content"
+            app:layout_constraintStart_toStartOf="@id/place_single_parent"
+            app:layout_constraintTop_toBottomOf="@+id/place_single_heading" />
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

@@ -120,7 +120,7 @@ public class PlacesFragment extends Fragment {
 
         mRecyclerView.setHasFixedSize(true);
         mLayoutManager = new LinearLayoutManager(getActivity());
-        mAdapter = new PlacesAdapter(mPlaces);
+        mAdapter = new PlacesAdapter(getContext(), mPlaces);
         mRecyclerView.setLayoutManager(mLayoutManager);
         mRecyclerView.setAdapter(mAdapter);
 
