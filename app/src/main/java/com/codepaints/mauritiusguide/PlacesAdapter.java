@@ -1,6 +1,8 @@
 package com.codepaints.mauritiusguide;
 
 import android.support.annotation.NonNull;
+import android.support.v4.app.Fragment;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -77,6 +79,10 @@ public class PlacesAdapter extends RecyclerView.Adapter<PlacesAdapter.PlacesView
                 public void onClick(View view) {
                     Toast.makeText(view.getContext(), "Item Clicked! " + itemHeading.getText(), Toast.LENGTH_SHORT).show();
 
+                    // load fragment
+                    AppCompatActivity activity   = (AppCompatActivity) view.getContext();
+                    Fragment          myFragment = new Fragment();
+                    activity.getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, myFragment).addToBackStack(null).commit();
                 }
             });
 
