@@ -76,11 +76,10 @@ public class PlacesAdapter extends RecyclerView.Adapter<PlacesAdapter.PlacesView
                 @Override
                 public void onClick(View view) {
                     Toast.makeText(view.getContext(), "Item Clicked! " + itemHeading.getText(), Toast.LENGTH_SHORT).show();
+
                 }
             });
 
         }
     }
-
-
 }
