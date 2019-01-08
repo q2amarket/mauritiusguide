@@ -44,11 +44,11 @@ public class PlaceActivity extends AppCompatActivity {
 
     private void setActivityData(int imageResource, String headingText, String contentText) {
         ImageView placeImage   = findViewById(R.id.place_single_image);
-        TextView  placeHeading = findViewById(R.id.place_single_heading);
+//        TextView  placeHeading = findViewById(R.id.place_single_heading);
         TextView  placeContent = findViewById(R.id.place_single_content);
 
         placeImage.setImageResource(imageResource);
-        placeHeading.setText(headingText);
+//        placeHeading.setText(headingText);
         placeContent.setText(contentText);
 
         Toolbar toolbar = findViewById(R.id.place_single_appbar);
