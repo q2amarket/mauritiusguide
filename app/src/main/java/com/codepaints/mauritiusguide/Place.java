@@ -6,14 +6,15 @@ public class Place {
 
     private String placeTitle;
     private String placeExcerpt;
-    private int placeImage;
-    private float placeRatings;
-    private int placeImageLarge;
+    private int    placeImage;
+    private float  placeRatings;
+    private int    placeImageLarge;
 
-    public Place(String placeTitle, String placeExcerpt, int placeImage, float placeRatings) {
+    public Place(String placeTitle, String placeExcerpt, int placeImage, int placeImageLarge, float placeRatings) {
         this.placeTitle = placeTitle;
         this.placeExcerpt = placeExcerpt;
         this.placeImage = placeImage;
+        this.placeImageLarge = placeImageLarge;
         this.placeRatings = placeRatings;
     }
 
@@ -47,6 +48,14 @@ public class Place {
 
     public void setPlaceRatings(float placeRatings) {
         this.placeRatings = placeRatings;
+    }
+
+    public int getPlaceImageLarge() {
+        return placeImageLarge;
+    }
+
+    public void setPlaceImageLarge(int placeImageLarge) {
+        this.placeImageLarge = placeImageLarge;
     }
 
     @Override

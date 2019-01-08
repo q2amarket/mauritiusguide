@@ -43,7 +43,80 @@ public class RestaurantsFragment extends Fragment {
                 getResources().getString(R.string.restaurant_a),
                 getResources().getString(R.string.dummy_content_long),
                 R.drawable.img_restaurant_a,
+                R.drawable.img_restaurant_large_a,
                 3.8f
+        ));
+
+        mRestaurants.add(new Place(
+                getResources().getString(R.string.restaurant_b),
+                getResources().getString(R.string.dummy_content_medium),
+                R.drawable.img_restaurant_b,
+                R.drawable.img_restaurant_large_b,
+                2.9f
+        ));
+
+        mRestaurants.add(new Place(
+                getResources().getString(R.string.restaurant_c),
+                getResources().getString(R.string.dummy_content_long),
+                R.drawable.img_restaurant_c,
+                R.drawable.img_restaurant_large_c,
+                4.9f
+        ));
+
+        mRestaurants.add(new Place(
+                getResources().getString(R.string.restaurant_d),
+                getResources().getString(R.string.dummy_content_long),
+                R.drawable.img_restaurant_d,
+                R.drawable.img_restaurant_large_d,
+                5.0f
+        ));
+
+        mRestaurants.add(new Place(
+                getResources().getString(R.string.restaurant_e),
+                getResources().getString(R.string.dummy_content_short),
+                R.drawable.img_restaurant_e,
+                R.drawable.img_restaurant_large_e,
+                3.6f
+        ));
+
+        mRestaurants.add(new Place(
+                getResources().getString(R.string.restaurant_f),
+                getResources().getString(R.string.dummy_content_medium),
+                R.drawable.img_restaurant_f,
+                R.drawable.img_restaurant_large_f,
+                4.5f
+        ));
+
+        mRestaurants.add(new Place(
+                getResources().getString(R.string.restaurant_g),
+                getResources().getString(R.string.dummy_content_short),
+                R.drawable.img_restaurant_g,
+                R.drawable.img_restaurant_large_g,
+                4.7f
+        ));
+
+        mRestaurants.add(new Place(
+                getResources().getString(R.string.restaurant_h),
+                getResources().getString(R.string.dummy_content_short),
+                R.drawable.img_restaurant_h,
+                R.drawable.img_restaurant_large_h,
+                1.6f
+        ));
+
+        mRestaurants.add(new Place(
+                getResources().getString(R.string.restaurant_i),
+                getResources().getString(R.string.dummy_content_long),
+                R.drawable.img_restaurant_i,
+                R.drawable.img_restaurant_large_i,
+                3.0f
+        ));
+
+        mRestaurants.add(new Place(
+                getResources().getString(R.string.restaurant_j),
+                getResources().getString(R.string.dummy_content_long),
+                R.drawable.img_restaurant_j,
+                R.drawable.img_restaurant_large_j,
+                4.2f
         ));
 
         mRecyclerView.setHasFixedSize(true);

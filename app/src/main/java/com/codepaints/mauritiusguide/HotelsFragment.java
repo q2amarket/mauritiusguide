@@ -45,6 +45,7 @@ public class HotelsFragment extends Fragment {
                 getResources().getString(R.string.hotel_a),
                 getResources().getString(R.string.dummy_content_short),
                 R.drawable.img_hotel_a,
+                R.drawable.img_hotel_large_a,
                 4.6f
         ));
 
@@ -52,6 +53,7 @@ public class HotelsFragment extends Fragment {
                 getResources().getString(R.string.hotel_b),
                 getResources().getString(R.string.dummy_content_long),
                 R.drawable.img_hotel_b,
+                R.drawable.img_hotel_large_b,
                 4.1f
         ));
 
@@ -59,6 +61,7 @@ public class HotelsFragment extends Fragment {
                 getResources().getString(R.string.hotel_c),
                 getResources().getString(R.string.dummy_content_medium),
                 R.drawable.img_hotel_c,
+                R.drawable.img_hotel_large_c,
                 3.3f
         ));
 
@@ -66,6 +69,7 @@ public class HotelsFragment extends Fragment {
                 getResources().getString(R.string.hotel_d),
                 getResources().getString(R.string.dummy_content_short),
                 R.drawable.img_hotel_d,
+                R.drawable.img_hotel_large_d,
                 5.0f
         ));
 
@@ -73,6 +77,7 @@ public class HotelsFragment extends Fragment {
                 getResources().getString(R.string.hotel_e),
                 getResources().getString(R.string.dummy_content_long),
                 R.drawable.img_hotel_e,
+                R.drawable.img_hotel_large_e,
                 2.8f
         ));
 
@@ -80,6 +85,7 @@ public class HotelsFragment extends Fragment {
                 getResources().getString(R.string.hotel_f),
                 getResources().getString(R.string.dummy_content_medium),
                 R.drawable.img_hotel_f,
+                R.drawable.img_hotel_large_f,
                 2.3f
         ));
 
@@ -87,6 +93,7 @@ public class HotelsFragment extends Fragment {
                 getResources().getString(R.string.hotel_g),
                 getResources().getString(R.string.dummy_content_medium),
                 R.drawable.img_hotel_g,
+                R.drawable.img_hotel_large_g,
                 4.9f
         ));
 
@@ -94,6 +101,7 @@ public class HotelsFragment extends Fragment {
                 getResources().getString(R.string.hotel_h),
                 getResources().getString(R.string.dummy_content_short),
                 R.drawable.img_hotel_h,
+                R.drawable.img_hotel_large_h,
                 1.6f
         ));
 
@@ -101,6 +109,7 @@ public class HotelsFragment extends Fragment {
                 getResources().getString(R.string.hotel_i),
                 getResources().getString(R.string.dummy_content_long),
                 R.drawable.img_hotel_i,
+                R.drawable.img_hotel_large_i,
                 4.8f
         ));
 
@@ -108,6 +117,7 @@ public class HotelsFragment extends Fragment {
                 getResources().getString(R.string.hotel_j),
                 getResources().getString(R.string.dummy_content_long),
                 R.drawable.img_hotel_j,
+                R.drawable.img_hotel_large_j,
                 4.6f
         ));
 

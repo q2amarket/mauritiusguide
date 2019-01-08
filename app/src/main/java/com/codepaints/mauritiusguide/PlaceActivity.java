@@ -9,6 +9,7 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
 import android.widget.ImageView;
+import android.widget.RatingBar;
 import android.widget.TextView;
 
 public class PlaceActivity extends AppCompatActivity {
@@ -36,20 +37,25 @@ public class PlaceActivity extends AppCompatActivity {
                 int    placeImage   = bundle.getInt("place_image");
                 String placeHeading = bundle.getString("place_heading");
                 String placeContent = bundle.getString("place_content");
+                String placeRatingsText = bundle.getString("place_ratings");
 
-                setActivityData(placeImage, placeHeading, placeContent);
+                setActivityData(placeImage, placeHeading, placeContent, placeRatingsText);
             }
         }
     }
 
-    private void setActivityData(int imageResource, String headingText, String contentText) {
+    private void setActivityData(int imageResource, String headingText, String contentText, String placeRatings) {
         ImageView placeImage   = findViewById(R.id.place_single_image);
 //        TextView  placeHeading = findViewById(R.id.place_single_heading);
         TextView  placeContent = findViewById(R.id.place_single_content);
+        TextView placeRatingsText = findViewById(R.id.place_single_rating_text);
+        RatingBar placeRatingBar = findViewById(R.id.place_single_ratingBar);
 
         placeImage.setImageResource(imageResource);
 //        placeHeading.setText(headingText);
         placeContent.setText(contentText);
+        placeRatingsText.setText(placeRatings);
+        placeRatingBar.setRating(Float.parseFloat(placeRatings));
 
         Toolbar toolbar = findViewById(R.id.place_single_appbar);
         setSupportActionBar(toolbar);

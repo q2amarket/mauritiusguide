@@ -47,12 +47,13 @@ public class PlacesAdapter extends RecyclerView.Adapter<PlacesAdapter.PlacesView
         viewHolder.itemCardVIew.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(mContext, "Item Clicked " + place.getPlaceImage() + " / " + place.getPlaceTitle(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(mContext, place.getPlaceTitle(), Toast.LENGTH_SHORT).show();
 
                 Intent intent = new Intent(mContext, PlaceActivity.class);
-                intent.putExtra("place_image", place.getPlaceImage());
+                intent.putExtra("place_image", place.getPlaceImageLarge());
                 intent.putExtra("place_heading", place.getPlaceTitle());
                 intent.putExtra("place_content", place.getPlaceExcerpt());
+                intent.putExtra("place_ratings", place.getPlaceRatings());
                 mContext.startActivity(intent);
             }
         });
@@ -82,14 +83,6 @@ public class PlacesAdapter extends RecyclerView.Adapter<PlacesAdapter.PlacesView
             itemRatingBar = itemView.findViewById(R.id.place_item_rating_bar);
             itemImage = itemView.findViewById(R.id.place_item_image);
             itemCardVIew = itemView.findViewById(R.id.place_card_view);
-
-            itemCardVIew.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Toast.makeText(view.getContext(), "Item Clicked! " + itemHeading.getText(), Toast.LENGTH_SHORT).show();
-                }
-            });
-
         }
     }
 }
