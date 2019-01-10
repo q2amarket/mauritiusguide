@@ -7,4 +7,9 @@
     <string name="item_heading">Item Heading</string>
     <string name="list_item_placeholder">Each device OEM provides a mask, which the system then uses to render all adaptive icons with the same shape. Adaptive launcher icons are also used in shortcuts,</string>
     <string name="ratings_value_placeholder">4.5</string>
+    <string name="tab_label_places">Places</string>
+    <string name="tab_label_hotels">Hotels</string>
+    <string name="tab_label_restaurants">Restaurants</string>
+    <string name="tab_label_beaches">Beaches</string>
+    <string name="tab_label_shopping">Shopping</string>
 </resources>

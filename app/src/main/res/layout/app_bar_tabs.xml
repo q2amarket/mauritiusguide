@@ -22,25 +22,41 @@
         android:id="@+id/tabLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary">
+        android:background="?attr/colorPrimary"
+        android:layout_gravity="center_horizontal"
+        app:tabGravity="center"
+        app:tabMode="scrollable"
+        android:scrollbars="horizontal">
 
         <android.support.design.widget.TabItem
             android:id="@+id/places"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Places" />
+            android:text="@string/tab_label_places" />
 
         <android.support.design.widget.TabItem
             android:id="@+id/hotels"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Hotels" />
+            android:text="@string/tab_label_hotels" />
 
         <android.support.design.widget.TabItem
             android:id="@+id/restaurants"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Restaurants" />
+            android:text="@string/tab_label_restaurants" />
+
+        <android.support.design.widget.TabItem
+            android:id="@+id/beaches"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tab_label_beaches" />
+
+        <android.support.design.widget.TabItem
+            android:id="@+id/beaches"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tab_label_shopping" />
 
     </android.support.design.widget.TabLayout>
 

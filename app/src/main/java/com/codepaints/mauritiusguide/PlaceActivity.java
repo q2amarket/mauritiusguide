@@ -46,13 +46,11 @@ public class PlaceActivity extends AppCompatActivity {
 
     private void setActivityData(int imageResource, String headingText, String contentText, String placeRatings) {
         ImageView placeImage   = findViewById(R.id.place_single_image);
-//        TextView  placeHeading = findViewById(R.id.place_single_heading);
         TextView  placeContent = findViewById(R.id.place_single_content);
         TextView placeRatingsText = findViewById(R.id.place_single_rating_text);
         RatingBar placeRatingBar = findViewById(R.id.place_single_ratingBar);
 
         placeImage.setImageResource(imageResource);
-//        placeHeading.setText(headingText);
         placeContent.setText(contentText);
         placeRatingsText.setText(placeRatings);
         placeRatingBar.setRating(Float.parseFloat(placeRatings));
