@@ -21,12 +21,10 @@ public class PlaceActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_place);
 
-        Log.d(TAG, "onCreate: started.");
         getIncomingIntent();
     }
 
     private void getIncomingIntent() {
-        Log.d(TAG, "getIncomingIntent: checking for incoming intents.");
 
         Intent intent = getIntent();
         Bundle bundle = intent.getExtras();
